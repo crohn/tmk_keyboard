@@ -22,7 +22,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TAB, Q, W, E, R, T, Y, U, I, O, P, LBRC, RBRC, BSLS, \
         LCTL, A, S, D, F, G, H, J, K, L, SCLN, QUOT, ENT, \
         LSFT, Z, X, C, V, B, N, M, COMM, DOT, SLSH, RSFT, \
-        FN0, LALT, GUI, SPC, FN0, RALT, NO, ESC
+        FN0, LALT, LGUI, SPC, FN0, RALT, NO, ESC
     ),
 
     /* Keymap 1: DVORAK layout
@@ -43,7 +43,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TAB, QUOT, COMM, DOT, P, Y, F, G, C, R, L, SLSH, EQL, BSLS, \
         LCTL, A, O, E, U, I, D, H, T, N, S, MINS, ENT, \
         LSFT, SCLN, Q, J, K, X, B, M, W, V, Z, RSFT, \
-        FN0, LALT, GUI, SPC, FN0, RALT, NO, ESC
+        FN0, LALT, LGUI, SPC, FN0, RALT, NO, ESC
     ),
 
     /* Keymap 2: editor layout
