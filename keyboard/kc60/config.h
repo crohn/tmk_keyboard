@@ -24,8 +24,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define PRODUCT_ID      0x6060
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    geekhack
-#define PRODUCT         GH60
-#define DESCRIPTION     t.m.k. keyboard firmware for GH60
+#define PRODUCT         KC60
+#define DESCRIPTION     t.m.k. keyboard firmware for KC60
 
 /* key matrix size */
 #define MATRIX_ROWS 5
