@@ -72,5 +72,5 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * Fn actions
  */
 const action_t PROGMEM fn_actions[] = {
-    [0] = ACTION_LAYER_TAP_TOGGLE(1),
+    [0] = ACTION_LAYER_TAP_TOGGLE(2),
 };
