@@ -45,6 +45,9 @@ static void select_row(uint8_t row);
 
 void matrix_init(void)
 {
+    MCUCR = (1<<JTD);
+    MCUCR = (1<<JTD);
+
     // initialize row and col
     unselect_rows();
     init_cols();
