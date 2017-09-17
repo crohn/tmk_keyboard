@@ -14,7 +14,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |-----------------------------------------------------------|
      * |Shift   |  Z|  X|  C|  V|  B|  N|  M|  ,|  .|  /|Shift     |
      * |-----------------------------------------------------------|
-     * | Fn0|Alt |Gui |      Space             | Fn0| Alt|    | Esc|
+     * | Fn0|Alt |Gui |      Space             | Gui| Alt| Fn1| Esc|
      * '-----------------------------------------------------------'
      */
     KEYMAP_ANSI(
@@ -22,7 +22,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TAB, Q, W, E, R, T, Y, U, I, O, P, LBRC, RBRC, BSLS, \
         LCTL, A, S, D, F, G, H, J, K, L, SCLN, QUOT, ENT, \
         LSFT, Z, X, C, V, B, N, M, COMM, DOT, SLSH, RSFT, \
-        FN0, LALT, LGUI, SPC, FN0, RALT, NO, ESC
+        FN0, LALT, LGUI, SPC, RGUI, RALT, FN1, ESC
     ),
 
     /* Keymap 1: DVORAK layout
@@ -35,7 +35,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |-----------------------------------------------------------|
      * |Shift   |  ;|  Q|  J|  K|  X|  B|  M|  W|  V|  Z|Shift     |
      * |-----------------------------------------------------------|
-     * | Fn0|Alt |Gui |      Space             | Fn0| Alt|    | Esc|
+     * | Fn0|Alt |Gui |      Space             | Gui| Alt| Fn1| Esc|
      * '-----------------------------------------------------------'
      */
     KEYMAP_ANSI(
@@ -43,16 +43,16 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TAB, QUOT, COMM, DOT, P, Y, F, G, C, R, L, SLSH, EQL, BSLS, \
         LCTL, A, O, E, U, I, D, H, T, N, S, MINS, ENT, \
         LSFT, SCLN, Q, J, K, X, B, M, W, V, Z, RSFT, \
-        FN0, LALT, LGUI, SPC, FN0, RALT, NO, ESC
+        FN0, LALT, LGUI, SPC, RGUI, RALT, FN1, ESC
     ),
 
     /* Keymap 2: editor layout
      * .-----------------------------------------------------------.
      * |Esc| F1| F2| F3| F4| F5| F6| F7| F8| F9|F10|F11|F12|       |
      * |-----------------------------------------------------------|
-     * |     |   |   | Up|   |   |   |   |   |   |   |   |   |     |
+     * |     |   |   |   |   |   |   |   |   |   |   |   |   |     |
      * |-----------------------------------------------------------|
-     * |      |   |Lef|Dow|Rig|   |   |Lef|Dow| Up|Rig|   |        |
+     * |      |   |   |   |   |   |   |Lef|Dow| Up|Rig|   |        |
      * |-----------------------------------------------------------|
      * |        |   |   |   |   |   |   |   |   |   |   |          |
      * |-----------------------------------------------------------|
@@ -61,8 +61,8 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      */
     KEYMAP_ANSI(
         ESC, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11, F12, TRNS, \
-        TRNS, TRNS, TRNS, UP, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, \
-        TRNS, TRNS, LEFT, DOWN, RGHT, TRNS, TRNS, LEFT, DOWN, UP, RGHT, TRNS, TRNS, \
+        TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, \
+        TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, LEFT, DOWN, UP, RGHT, TRNS, TRNS, \
         TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, \
         TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS
     ),
@@ -72,5 +72,6 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * Fn actions
  */
 const action_t PROGMEM fn_actions[] = {
-    [0] = ACTION_LAYER_TAP_TOGGLE(2),
+    [0] = ACTION_LAYER_MOMENTARY(2),
+    [1] = ACTION_LAYER_TOGGLE(2),
 };
